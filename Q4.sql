@@ -3,13 +3,12 @@
 #         • total_profile_visits 
 #         • total_new_followers 
 
-SELECT 
-    dates.month_name,
-    SUM(accounts.profile_visits) AS total_profile_visits,
-    SUM(accounts.new_followers) AS total_new_followers
-FROM 
-gdb0120.dim_dates dates
-INNER JOIN 
-gdb0120.fact_account accounts
-ON dates.date = accounts.date
-GROUP BY dates.month_name;
+with cte as (select d.month_name,a.profile_visits, a.new_followers from dim_dates d
+inner join fact_account a
+on d.date = a.date)
+
+select month_name,
+sum(profile_visits) as total_profile_visits,
+sum(new_followers) as total_followers
+from cte 
+group by month_name;
