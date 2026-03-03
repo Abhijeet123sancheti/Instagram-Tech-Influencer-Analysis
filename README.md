@@ -1,5 +1,4 @@
 # 📊 Tech Instagram Influencer Performance Analysis (SQL Project)
-📊 Tech Instagram Influencer Performance Analysis (SQL Project)
 ## 🚀 Project Overview
 
 This project analyzes Instagram performance data of a tech influencer to generate actionable business insights. Built as part of the Codebasics Virtual Internship, the analysis leverages MySQL to evaluate engagement metrics, content effectiveness, and audience behavior.
